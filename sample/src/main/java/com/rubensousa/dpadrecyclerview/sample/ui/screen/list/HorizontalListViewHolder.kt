@@ -123,9 +123,9 @@ class HorizontalListViewHolder(
         if (config.reverseLayout) {
             recyclerView.setReverseLayout(true)
         }
-        if (config.isScrollSpeedLimited) {
+        //if (config.isScrollSpeedLimited) {
             setupSlowScrollingBehavior()
-        }
+        //}
     }
 
     private fun setupSlowScrollingBehavior() {

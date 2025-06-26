@@ -8,6 +8,7 @@ import com.rubensousa.dpadrecyclerview.sample.ui.model.ListModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 class ListViewModel : ViewModel() {
 
@@ -55,7 +56,7 @@ class ListViewModel : ViewModel() {
         val itemCount = if (enableLooping) {
             8
         } else {
-            50
+            20
         }
         repeat(itemCount) {
             items.add(it)
