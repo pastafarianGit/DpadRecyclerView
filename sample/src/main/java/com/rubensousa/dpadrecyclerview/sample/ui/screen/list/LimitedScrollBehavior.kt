@@ -12,12 +12,12 @@ class LimitedScrollBehavior {
         recyclerView: DpadRecyclerView,
         extraLayoutSpaceStart: () -> Int = { 0 },
         extraLayoutSpaceEnd: () -> Int = { 0 },
-        maxPendingAlignments: Int = 1//2
+        maxPendingAlignments: Int = 10//2
 
     ) {
         recyclerView.setSmoothScrollMaxPendingAlignments(maxPendingAlignments)
         recyclerView.setSmoothScrollMaxPendingMoves(0)
-        recyclerView.setSmoothScrollSpeedFactor(2f)
+        recyclerView.setSmoothScrollSpeedFactor(8f)
         recyclerView.setExtraLayoutSpaceStrategy(object : ExtraLayoutSpaceStrategy {
             override fun calculateStartExtraLayoutSpace(state: RecyclerView.State): Int {
                 return extraLayoutSpaceStart()
